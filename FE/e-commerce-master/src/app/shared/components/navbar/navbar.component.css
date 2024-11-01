@@ -1,0 +1,26 @@
+/* Estilo básico para el input y el botón */
+.search-input {
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Clase para ocultar el contenedor */
+.hidden {
+    display: none;
+}

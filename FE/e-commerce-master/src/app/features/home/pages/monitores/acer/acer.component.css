@@ -1,0 +1,33 @@
+.flex-container {
+    border: 1px solid black;
+    background: #ccc;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se muevan a la siguiente fila */
+    justify-content: flex-start;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.containerItmes {
+    border: 1px solid #ccc;
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 23%; /* Aproximadamente el 25% del ancho total, con algo de margen */
+    margin: 10px; /* Margen entre los elementos */
+    box-sizing: border-box; /* Asegura que el padding y el borde no afecten el ancho */
+    padding: 10px; /* Espacio interno para que no queden pegados al borde */
+    text-align: center; /* Centrar el texto e imagen */
+}
+
+/* Estilos para las imágenes */
+.containerItmes img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 150px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Recortar la imagen para que encaje sin deformarse */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
