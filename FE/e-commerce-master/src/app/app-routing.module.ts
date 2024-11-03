@@ -5,6 +5,8 @@ import { AcerComponent } from './features/home/pages/monitores/acer/acer.compone
 import { GpuComponent } from './features/home/pages/gpu/gpu.component';
 
 import { ProductPageComponent } from './features/home/pages/productPage/productPage.component';
+import { CpuComponent } from './features/home/pages/cpu/cpu.component';
+import { ProductPageGpuComponent } from './features/home/pages/productPageGpu/productPageGpu.component';
 
 @NgModule({
   imports: [
@@ -13,9 +15,11 @@ import { ProductPageComponent } from './features/home/pages/productPage/productP
               path: '', component: LayoutComponent,
               children: [
                   { path: '', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
-                  {path: 'monitor/:nombre',component: AcerComponent},
-                  {path: 'grafica/:nombre',component: GpuComponent},
-                  {path:'productMonitor/:item',component:ProductPageComponent}
+                  {path: 'monitor',component: AcerComponent},
+                  {path: 'grafica',component: GpuComponent},
+                  {path: 'cpu',component: CpuComponent},
+                  {path:'Monitor/:item',component:ProductPageComponent},
+                  {path:'Grafica/:item',component:ProductPageGpuComponent}
                   // { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
                   // { path: 'utilities', loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },
                   // { path: 'documentation', loadChildren: () => import('./demo/components/documentation/documentation.module').then(m => m.DocumentationModule) },

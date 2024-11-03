@@ -8,11 +8,24 @@ import { procesadoresService } from 'src/app/service/procesadores.service';
 })
 export class CpuComponent implements OnInit {
 
+
   allitems: any;
   onlyProveedores:any
   constructor(private cpuService:procesadoresService) { }
 
   ngOnInit() {
+    this.showItems();
+  }
+
+  showItems(){
+    this.cpuService.getProcesador().subscribe((data) => {
+      this.allitems = data;
+      console.log('datos de cpu:',this.allitems)
+    })
+  }
+
+  onSelectitem(item:any){
+
   }
 
 

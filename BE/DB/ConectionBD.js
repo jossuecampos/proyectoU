@@ -37,7 +37,7 @@ conectionSql();
 
 function todos(tabla){
     return new Promise((resolve,reject)=>{
-        conection.query(`SELECT * FROM ${tabla}`, (error, result) => {
+        conection.query(`SELECT * FROM ${tabla} WHERE imagen != ""`, (error, result) => {
             if (error) return reject(error);
             resolve(result)
         })
@@ -55,7 +55,7 @@ function uno(tabla,id){
 
 function porProveedor(tabla,pProv){
     return new Promise((resolve,reject)=>{
-        conection.query(`SELECT * FROM ${tabla} WHERE Proveedor = "${pProv}"`, (error, result) => {
+        conection.query(`SELECT * FROM ${tabla} WHERE Proveedor = "${pProv}" && imagen != ""`, (error, result) => {
             if (error) return reject(error);
             resolve(result)
         })

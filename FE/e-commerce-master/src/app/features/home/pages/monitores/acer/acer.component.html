@@ -1,15 +1,8 @@
-<p>
-  Este es el menu de monitor de marca acer
-  
-  <label>{{proveedor}}</label>
-</p>
+<h2 class="header">PRODUCTO/MONITORES</h2>
 <div class="flex-container">
-    <div (click)="onSelectitem(items)" class="containerItmes" *ngFor = "let items of allitems.body">
-      <img [src]="items.imagen" alt="Producto" *ngIf="items.imagen" />
-      <h3 class="nameItems">
-        {{items.Nombre}}
-      </h3>
-      <h5>{{items.Proveedor}} | {{items.Precio}}</h5>
+    <div (click)="onSelectitem(items)" class="containerItmes" *ngFor="let items of allitems.body">
+        <img [src]="items.imagen" alt="Producto" *ngIf="items.imagen" />
+        <h3 class="nameItems">{{items.Nombre}}</h3>
+        <h5>{{items.Proveedor}} | {{items.Precio}}</h5>
     </div>
-
 </div>

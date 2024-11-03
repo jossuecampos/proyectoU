@@ -28,18 +28,25 @@ export class AcerComponent implements OnInit, OnDestroy {
   }
 
   // Método showItems que realiza la llamada al servicio
-  showItems(): void {
-    this.service.getMonitorByProveedor(this.proveedor).subscribe((data) => {
+  // showItems(): void {
+  //   this.service.getMonitorByProveedor(this.proveedor).subscribe((data) => {
+  //     this.allitems = data;
+  //     this.imagePath = this.allitems.body.find((x:any)=> x.imagen == '')
+  //     console.log(this.imagePath)
+  //     console.log('Datos actualizados:', this.allitems);
+  //   });
+  // }
+
+  showItems():void{
+    this.service.getMonitor().subscribe((data) => {
       this.allitems = data;
-      this.imagePath = this.allitems.body.find((x:any)=> x.imagen == '')
-      console.log(this.imagePath)
-      console.log('Datos actualizados:', this.allitems);
-    });
+      console.log('items', this.allitems)
+    })
   }
 
   onSelectitem(item: any){
     console.log(item)
-    this.router.navigate(['productMonitor',item.Nombre],{ queryParams: { id: item.id } })//("queryParams muestra la data que quieres enviar en la url.")
+    this.router.navigate(['Monitor',item.Nombre],{ queryParams: { id: item.id } })//("queryParams muestra la data que quieres enviar en la url.")
     // this.router.navigate(['monitor',proveedor])
   }
 

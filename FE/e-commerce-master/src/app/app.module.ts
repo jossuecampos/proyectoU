@@ -8,11 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './components/layout/layout.module';
 import { ProductPageComponent } from './features/home/pages/productPage/productPage.component';
+import { ProductPageGpuComponent } from './features/home/pages/productPageGpu/productPageGpu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    ProductPageGpuComponent
   ],
   imports: [
     BrowserModule,

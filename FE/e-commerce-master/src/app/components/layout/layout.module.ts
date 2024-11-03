@@ -12,7 +12,7 @@ import { RippleModule } from 'primeng/ripple';
 import { StyleClassModule } from 'primeng/styleclass';
 import { BrowserModule } from '@angular/platform-browser';
 import { AcerComponent } from 'src/app/features/home/pages/monitores/acer/acer.component';
-
+import { GpuComponent } from 'src/app/features/home/pages/gpu/gpu.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { AcerComponent } from 'src/app/features/home/pages/monitores/acer/acer.c
     NavbarComponent,
     FooterComponent,
     AcerComponent,
+    GpuComponent
   ],
   imports: [
     DividerModule,

@@ -18,17 +18,17 @@
                     <span>Product</span><span
                         class="p-ink" style="height: 89px; width: 89px; top: -35.5px; left: -14.5px;"></span></a>
                 <div
-                    class="surface-overlay shadow-none lg:shadow-2 lg:absolute w-full left-0 top-100 pl-8 pr-6 lg:px-6 py-0 lg:py-6 hidden">
+                class="surface-overlay shadow-none lg:shadow-2 lg:absolute w-full left-0 top-100 pl-8 pr-6 lg:px-6 py-0 lg:py-6" [class.hidden]="!isMenuVisible">
                     <div class="grid flex-wrap">
-                        <div class="col-12 md:col-6 xl:col-3">
+                        <div class="col-12 md:col-6 xl:col-3" >
                             <a pStyleClass="@next" enterClass="hidden" leaveToClass="hidden"
                                 class="p-element font-medium text-lg cursor-pointer text-700 block lg:hidden mb-3 select-none">Clothing</a>
                             <ul class="list-none py-0 pr-0 lg:pl-0 pl-5 m-0 text-700 hidden lg:block">
                                 <li class="hidden lg:block"><img
-                                        src="https://blocks.primeng.org/assets/images/blocks/ecommerce/storenavigation/storenavigation-2-1.png"
+                                        src="https://i.pcmag.com/imagery/reviews/04yXpm5uyjix6ORSzFZVOrA-1.fit_lim.size_919x518.v1693014357.jpg"
                                         alt="Image" height="160" style="border-radius: 12px;"></li>
-                                <li class="font-bold my-5 text-xl text-900 hidden lg:block">Monitor</li>
-                                <li *ngFor = "let proveedor of proveedores" (click)="onSelectProveedor(proveedor)" class="mb-3 cursor-pointer hover:text-900">{{proveedor}}</li>
+                                <li (click)="onSelectProducto()" class="font-bold my-5 text-xl text-900 hidden lg:block">Monitor</li>
+                                <!-- <li *ngFor = "let proveedor of proveedores" (click)="onSelectProveedor(proveedor)" class="mb-3 cursor-pointer hover:text-900">{{proveedor}}</li> -->
                             </ul>
                         </div>
                         <div class="col-12 md:col-6 xl:col-3">
@@ -38,8 +38,8 @@
                                 <li class="hidden lg:block"><img
                                         src="https://blocks.primeng.org/assets/images/blocks/ecommerce/storenavigation/storenavigation-2-2.png"
                                         alt="Image" height="160" style="border-radius: 12px;"></li>
-                                <li class="font-bold my-5 text-xl text-900 hidden lg:block">Procesador</li>
-                                <li *ngFor="let proveedor of proveedoresCpu" (click)="onSelectProveedor(proveedor)" class="mb-3 cursor-pointer hover:text-900">{{proveedor}}</li>
+                                <li class="font-bold my-5 text-xl text-900 hidden lg:block" (click)="onSelectProductoCpu()">Procesador</li>
+                                
                             </ul>
                         </div>
                         <div class="col-12 md:col-6 xl:col-3">
@@ -49,8 +49,8 @@
                                 <li class="hidden lg:block"><img
                                         src="https://blocks.primeng.org/assets/images/blocks/ecommerce/storenavigation/storenavigation-2-3.png"
                                         alt="Image" height="160" style="border-radius: 12px;"></li>
-                                <li class="font-bold my-5 text-xl text-900 hidden lg:block">GPU</li>
-                                <li *ngFor="let proveedor of proveedoresGpu" (click)="onSelectProveedorGpu(proveedor)" class="mb-3 cursor-pointer hover:text-900">{{proveedor}}</li>
+                                <li class="font-bold my-5 text-xl text-900 hidden lg:block" (click)="onSelectProveedorGpu()">GPU</li>
+                                
                             </ul>
                         </div>
                         <div class="col-12 md:col-6 xl:col-3">

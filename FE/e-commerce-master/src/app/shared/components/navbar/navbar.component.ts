@@ -14,20 +14,28 @@ export class NavbarComponent implements OnInit {
   proveedoresCpu: any[] = [];
   allitemsCpu: any;
   proveedoresGpu: any;
+  isMenuVisible: boolean = false;
 
   constructor(private cpuService:procesadoresService,private monitoresService: monitoresService, private gpuService:gpuService, private router: Router) {}
 
   ngOnInit(): void {
-    this.monitoresService.getMonitor().subscribe((data) => {
-      // Extraer los proveedores únicos
-      const allProveedores = data.body.map((monitor: any) => monitor.Proveedor);
-      // Eliminar duplicados con Set
-      this.proveedores = [...new Set(allProveedores)];
-      console.log(this.proveedores)
-    });
+    // this.monitoresService.getMonitor().subscribe((data) => {
+    //   // Extraer los proveedores únicos
+    //   const allProveedores = data.body.map((monitor: any) => monitor.Proveedor);
+    //   // Eliminar duplicados con Set
+    //   this.proveedores = [...new Set(allProveedores)];
+    //   console.log(this.proveedores)
+    // });
 
     this.getCpu()
     this.getGpu()
+    this.toggleMenu()
+  }
+
+ 
+
+  toggleMenu() {
+    this.isMenuVisible = !this.isMenuVisible;
   }
 
   getCpu(){
@@ -47,15 +55,17 @@ export class NavbarComponent implements OnInit {
       console.log(this.proveedoresGpu)
     })
   }
+onSelectProductoCpu(){
+  this.router.navigate(['/cpu']);
+}
 
-  onSelectProveedor(proveedor: any){
-    console.log(proveedor)
-    this.router.navigate(['monitor',proveedor])
+  onSelectProducto() {
+    this.isMenuVisible = true;
+    this.router.navigate(['/monitor']);
   }
 
-  onSelectProveedorGpu(proveedor: any){
-    console.log(proveedor)
-    this.router.navigate(['grafica',proveedor])
+  onSelectProveedorGpu(){
+    this.router.navigate(['/grafica'])
   }
 
 

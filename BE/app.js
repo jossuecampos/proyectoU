@@ -18,6 +18,7 @@ const error = require('./red/errors');
 
 const app = express();
 
+//cors para que puedan hacer peticiones de cualquier lugar.
 app.use(cors());
 
 //MiddleWare
