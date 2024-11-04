@@ -68,5 +68,8 @@ onSelectProductoCpu(){
     this.router.navigate(['/grafica'])
   }
 
+  onSelectProveedormotherboard(){
+    this.router.navigate(['/motherboard'])
+  }
 
 }

@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AcerComponent } from './features/home/pages/monitores/acer/acer.component';
 import { GpuComponent } from './features/home/pages/gpu/gpu.component';
+import { MotherboardComponent } from './features/home/pages/motherboard/motherboard.component';
 
 import { ProductPageComponent } from './features/home/pages/productPage/productPage.component';
 import { CpuComponent } from './features/home/pages/cpu/cpu.component';
 import { ProductPageGpuComponent } from './features/home/pages/productPageGpu/productPageGpu.component';
+import { ProductPageMotherboardComponent } from './features/home/pages/productPageMotherboard/productPageMotherboard.component';
 
 @NgModule({
   imports: [
@@ -18,8 +20,10 @@ import { ProductPageGpuComponent } from './features/home/pages/productPageGpu/pr
                   {path: 'monitor',component: AcerComponent},
                   {path: 'grafica',component: GpuComponent},
                   {path: 'cpu',component: CpuComponent},
+                  {path: 'motherboard',component: MotherboardComponent},
                   {path:'Monitor/:item',component:ProductPageComponent},
-                  {path:'Grafica/:item',component:ProductPageGpuComponent}
+                  {path:'Grafica/:item',component:ProductPageGpuComponent},
+                  {path:'Motherboard/:item',component:ProductPageMotherboardComponent}
                   // { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
                   // { path: 'utilities', loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },
                   // { path: 'documentation', loadChildren: () => import('./demo/components/documentation/documentation.module').then(m => m.DocumentationModule) },

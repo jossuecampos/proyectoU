@@ -1,0 +1,27 @@
+<div class="product-container" *ngFor = "let items of item.body">
+  <div class="image-container">
+    <img [src]="items.imagen" alt="Producto" *ngIf="items.imagen" />
+  </div>
+
+  <div class="details-container">
+    <h3 class="product-name">{{ items.Nombre }}</h3>
+    <h4 class="product-price">Precio: {{ items.Precio}}</h4>
+    <h4>Product Page:{{items.Product_Page}}</h4>
+    <div class="description-container">
+      <h5>Descripción:</h5>
+      <ul>
+        <li>Chipset: {{items.Chipset}}</li>
+        <li>DVI: {{items.DVI}}</li>
+        <li>Desbloqueado: {{items.Desbloqueado}}</li>
+        <li>Formato: {{items.Formato}}</li>
+        <li>HDMI: {{items.HDMI}}</li>
+        <li>Proveedor: {{items.Proveedor}}</li>
+        <li>SATA: {{items.SATA}}</li>
+        <li>Socket: {{items.Socket}}</li>
+        <li>Tipo_Memoria: {{items.Tipo_Memoria}}</li>
+        <li>VGA: {{items.VGA}}</li>
+        <li>WiFi: {{items.WiFi}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
