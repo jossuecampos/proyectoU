@@ -1,4 +1,6 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router,ActivatedRoute } from '@angular/router';
 import { procesadoresService } from 'src/app/service/procesadores.service';
 
 @Component({
@@ -11,7 +13,7 @@ export class CpuComponent implements OnInit {
 
   allitems: any;
   onlyProveedores:any
-  constructor(private cpuService:procesadoresService) { }
+  constructor(private cpuService:procesadoresService,private router:Router,private ActRouter:ActivatedRoute) { }
 
   ngOnInit() {
     this.showItems();
@@ -25,7 +27,8 @@ export class CpuComponent implements OnInit {
   }
 
   onSelectitem(item:any){
-
+    console.log('dato seleccionado:', item)
+    this.router.navigate(['Procesador',item.Nombre],{queryParams:{id: item.id}})//("queryParams muestra la data que quieres enviar en la url.")
   }
 
 

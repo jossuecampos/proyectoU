@@ -9,6 +9,11 @@ import { ProductPageComponent } from './features/home/pages/productPage/productP
 import { CpuComponent } from './features/home/pages/cpu/cpu.component';
 import { ProductPageGpuComponent } from './features/home/pages/productPageGpu/productPageGpu.component';
 import { ProductPageMotherboardComponent } from './features/home/pages/productPageMotherboard/productPageMotherboard.component';
+import { ProductPageCpuComponent } from './features/home/pages/productPageCpu/productPageCpu.component';
+import { HddComponent } from './features/home/pages/hdd/hdd.component';
+import { ProductPageHddComponent } from './features/home/pages/productPageHdd/productPageHdd.component';
+import { CpuCoolerComponent } from './features/home/pages/cpuCooler/cpuCooler.component';
+import { ProductPageCpuCoolerComponent } from './features/home/pages/productPageCpuCooler/productPageCpuCooler.component';
 
 @NgModule({
   imports: [
@@ -21,9 +26,14 @@ import { ProductPageMotherboardComponent } from './features/home/pages/productPa
                   {path: 'grafica',component: GpuComponent},
                   {path: 'cpu',component: CpuComponent},
                   {path: 'motherboard',component: MotherboardComponent},
+                  {path: 'hdd',component: HddComponent},
+                  {path: 'cpuCooler',component: CpuCoolerComponent},
                   {path:'Monitor/:item',component:ProductPageComponent},
                   {path:'Grafica/:item',component:ProductPageGpuComponent},
-                  {path:'Motherboard/:item',component:ProductPageMotherboardComponent}
+                  {path:'Motherboard/:item',component:ProductPageMotherboardComponent},
+                  {path:'Procesador/:item',component:ProductPageCpuComponent},
+                  {path:'hdd/:item',component:ProductPageHddComponent},
+                  {path:'cpuCooler/:item',component:ProductPageCpuCoolerComponent}
                   // { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
                   // { path: 'utilities', loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },
                   // { path: 'documentation', loadChildren: () => import('./demo/components/documentation/documentation.module').then(m => m.DocumentationModule) },
