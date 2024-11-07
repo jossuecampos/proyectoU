@@ -68,5 +68,12 @@ onSelectProductoCpu(){
     this.router.navigate(['/grafica'])
   }
 
+  onSelectProveedorPSU(){
+    this.router.navigate(['/PSU'])
+  }
+
+  onSelectProveedorRAMS(){
+    this.router.navigate(['/RAMS'])
+  }
 
 }

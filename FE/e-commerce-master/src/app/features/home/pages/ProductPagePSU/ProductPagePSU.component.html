@@ -1,0 +1,21 @@
+<div class="product-container" *ngFor = "let items of item.body">
+  <div class="image-container">
+    <img [src]="items.imagen" alt="Producto" *ngIf="items.imagen" />
+  </div>
+
+  <div class="details-container">
+    <h3 class="product-name">{{ items.Nombre }}</h3>
+    <h4 class="product-price">Precio: {{ items.Precio}}</h4>
+    <h4>Product Page:{{items.Product_Page}}</h4>
+    <div class="description-container">
+      <h5>Descripción:</h5>
+      <ul>
+        <li>Precio: {{items.Precio}}</li>
+        <li>Nombre: {{items.Nombre}}</li>
+        <li>Proveedor: {{items.Proveedor}}</li>
+        <li>MPN: {{items.MPN}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+Calificación de eficiencia
