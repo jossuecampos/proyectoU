@@ -2,7 +2,8 @@
 <div class="flex-container">
     <div (click)="onSelectitem(items)" class="containerItmes" *ngFor="let items of allitems.body">
         <img [src]="items.imagen" alt="Producto" *ngIf="items.imagen" />
+        <h5>{{items.Proveedor}}</h5>
         <h3 class="nameItems">{{items.Nombre}}</h3>
-        <h5>{{items.Proveedor}} | {{items.Precio}}</h5>
+        <h5 class="price">{{items.Precio}}</h5>
     </div>
 </div>

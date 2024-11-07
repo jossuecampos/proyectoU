@@ -1,12 +1,13 @@
 .flex-container {
-    border: 1px solid black;
-    background: #ccc;
+    border: 0px solid black;
+    /* background: #f1f0f0; */
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 80%;
     margin: 0 auto;
+    border-radius: 15px; /* Bordes redondeados del contenedor */
 }
 
 /* Estilos para el encabezado alineado con el contenedor */
@@ -29,7 +30,12 @@
     margin: 10px;
     box-sizing: border-box;
     padding: 10px;
-    text-align: center;
+    text-align: left;
+    border-radius: 10px; /* Bordes redondeados de los elementos de productos */
+}
+
+.price{
+    color: green;
 }
 
 /* Estilos para las imágenes */
