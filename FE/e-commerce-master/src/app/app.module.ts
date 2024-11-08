@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http'
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { RAMSComponent } from './features/home/pages/RAMS/RAMS.component';
 import { PSUComponent } from './features/home/pages/PSU/PSU.component';
@@ -22,7 +23,8 @@ import { ProductPageRAMSComponent } from './features/home/pages/ProductPageRAMS/
     PSUComponent,
     RAMSComponent,
     ProductPagePSUComponent,
-    ProductPageRAMSComponent
+    ProductPageRAMSComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { ProductPageRAMSComponent } from './features/home/pages/ProductPageRAMS/
     CommonModule,
     BrowserAnimationsModule,
     LayoutModule,
-    HttpClientModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
